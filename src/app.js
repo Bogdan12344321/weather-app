@@ -15,7 +15,7 @@ const forecast = require('../utils/forecast')
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialPath)
-
+app.use(cors());
 
 //Setup static directory to serve
 app.use(express.static(publicDirectoryPath));
